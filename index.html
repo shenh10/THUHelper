@@ -36,26 +36,66 @@
         <span class="blc"></span><span class="trc"></span>
         </div>
         <article class="markdown-body">
-          <h3>
+          <h1>
+<a id="thuhelper" class="anchor" href="#thuhelper" aria-hidden="true"><span class="octicon octicon-link"></span></a>THUHelper</h1>
+
+<p>Automatically exported from code.google.com/p/thudownloader</p>
+
+<h2>
+<a id="清华大学网络学堂助手" class="anchor" href="#%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E7%BD%91%E7%BB%9C%E5%AD%A6%E5%A0%82%E5%8A%A9%E6%89%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>清华大学网络学堂助手</h2>
+
+<h3>
 <a id="背景" class="anchor" href="#%E8%83%8C%E6%99%AF" aria-hidden="true"><span class="octicon octicon-link"></span></a>背景</h3>
 
 <p>很早就想有这么一个工具了，本地看公告、自动下文件等等，可惜一直处于“有空就做”的状态23333333</p>
 
 <p>然后google上发现了<a href="https://code.google.com/p/thudownloader/">thudownloader</a>，试着用了一下好赞啊！！！可惜年久失修（最后一次更新是2011年），现在已经不能用了。</p>
 
+<blockquote>
+<p>以下为google上的原文</p>
+</blockquote>
+
+<p>身为清华学子，网络学堂是学习生活不可或缺的一部分。 但相信大部分人都对上网络学堂下课件看公告感到厌烦吧。</p>
+
+<p>（以下一段是抱怨，可直接跳过 ^^） 每天，我们都得把每个课程刷一遍，看看有没有新的课件或新的公告。如果有新的课件， 我们还得一个一个点击下载，还得把名字里那一串让人看起来眼花缭乱的数字去掉； 万一碰上课件比较多的课程，还得对着本地的文件看哪个是已经下载的，哪个是新的。 公告也是如此，说不定哪天老师就发布了个新公告，但由于自己没注意，很可能就错过 一次习题课，又或者是错过某次实验的通知......</p>
+
+<p>如果你对上文深有同感，那么请快试用我们的软件吧。你只需在第一次启动程序后， 设置好用户名密码，以及本地的课件根目录，之后的一切都交给程序去忙吧。 借用某大牛的话说:“它会带给你一种惊艳的感觉!”</p>
+
+<p>还等什么 赶紧下载试用吧 !! (点击右侧Featured downloads区域的链接开始下载~)</p>
+
+<p>--转自Free大牛Dinstein </p>
+
 <p>于是Export to GitHub，研究了一个下午让他能运行了。（问题竟然是<code>course_id</code>从5位变成了6位！）</p>
 
 <p>顺便改了个名。</p>
 
+<blockquote>
+<p>可执行文件由pyinstaller生成</p>
+</blockquote>
+
 <h3>
 <a id="开始使用" class="anchor" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>开始使用</h3>
+
+<ol>
+<li>安装运行
 
 <ul>
 <li>如果你有Python和pip(Windows/OSX/Linux)
 
 <ol>
+<li>下载源码</li>
 <li>使用<code>pip</code>等方式安装依赖(包括wxPython等)</li>
 <li>运行MyDownloader.py</li>
+</ol>
+</li>
+<li>如果你没有Python
+
+<ul>
+<li>从release里找到可执行文件</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>在菜单栏选择“操作”--“登录设置”；</li>
 <li>设置默认下载的文件夹，以及默认的打印文件夹，注意记得点“保存以上设置”；</li>
 <li>设置用户名和密码，强烈建议选上“自动登录”，密码以加密形式存在本地；</li>
@@ -64,22 +104,6 @@
 <li>现在可以用鼠标点击左边的课程名，在右上方的“课程公告”里会显示这门课的公告，右下方“远程文件信息”显示的是该门 课课件的信息，右键点击课件名可以取消该课件的下载标记。这样，如果不想下载诸如视频之类的大课件，可以在这里取消；</li>
 <li>把不需要下载的课件的下载标记去除后，点击快捷键的最左边一个按钮：“下载所有课件、更新公告”，这样就开始自动下载 了。这可能也需要一段时间，请耐心等待 :)</li>
 </ol>
-</li>
-<li>如果你没有Python
-
-<ol>
-<li>等我解决py2exe的bug</li>
-<li>或者下个Python2.7</li>
-</ol>
-</li>
-<li>如果你想生成exe
-
-<ol>
-<li>
-<code>python setup.py py2exe</code>(有bug未解决)</li>
-</ol>
-</li>
-</ul>
 
 <h3>
 <a id="功能介绍" class="anchor" href="#%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D" aria-hidden="true"><span class="octicon octicon-link"></span></a>功能介绍</h3>
@@ -90,6 +114,17 @@
 <li>自动检测本地课件和网络学堂上课件是否一致，如果不一致，提示重新下载；</li>
 <li>可以屏蔽不想下载的课件，这样该课件以后都不会被下载；如果后悔了，可以打开屏蔽，课件还能照常被下载；</li>
 </ol>
+
+<h3>
+<a id="todolist" class="anchor" href="#todolist" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODOList</h3>
+
+<ul>
+<li>下载文件重命名掩码</li>
+<li>新版网络学堂支持</li>
+<li>作业列表与提交</li>
+<li>更好看的公告栏</li>
+<li>更好看的UI</li>
+</ul>
 
 <h3>
 <a id="作者和贡献者" class="anchor" href="#%E4%BD%9C%E8%80%85%E5%92%8C%E8%B4%A1%E7%8C%AE%E8%80%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>作者和贡献者</h3>
